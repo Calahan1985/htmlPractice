@@ -69,7 +69,7 @@ a {
 }
 
 .button {
-	background-color: #fc5f45;
+	/* background-color: #fc5f45; */
 	border: 2px solid transparent;
 	border-radius: 25px;
 	color: #fff;
@@ -77,9 +77,18 @@ a {
 	font-weight: 600;
 	height: 50px;
 	text-align: center;
-	line-height: 50px;
+	line-height: 1;
 	text-transform: uppercase;
 	width: 180px;
+	vertical-align: middle;
+	transition: all 0.5s ease;
+}
+
+.button:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 
 .button.red {
@@ -92,6 +101,10 @@ a {
 
 .button.blue {
 	background-color: #b27cf5;
+}
+
+.button:hover {
+	/* transform: translateX(-100%); */
 }
 
 .button.red:hover,
@@ -479,6 +492,141 @@ header {
 
 .features-block .releases .circle {border-color: #feb960;}
 .features-block .releases .circle:before {border-color: #feb960;}
+
+.work-steps .row-step {
+	position: relative;
+}
+
+.work-steps img {
+	display: block;
+	margin: 0 auto;
+	width: 556px;
+}
+
+.work-steps .absolute-block {
+	position: absolute;
+	top: -50px;
+	height: 300px;
+	padding: 40px 60px 55px 35px;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0,0.5);
+	background: #fff;
+	border-bottom: 3px solid transparent;
+	max-width: 460px;
+}
+
+.work-steps .absolute-block.absolute-left {left: 0;}
+.work-steps .absolute-block.absolute-right {right: 0;}
+
+.work-steps .absolute-block.red-border {border-color: #fc5f45;}
+.work-steps .absolute-block.green-border {border-color: #38c695;}
+.work-steps .absolute-block.blue-border {border-color: #b27cf5;}
+.work-steps .absolute-block.yellow-border {border-color: #ff9900;}
+
+.work-steps .inner-holder {
+	padding: 30px 0 0 85px;
+	position: relative;
+}
+
+.work-steps .inner-holder:before {
+	content: attr(data-innernumber);
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #e0e0e0;
+	font: 700 50px/1 'Libre Baskerville', serif;
+}
+
+.row-step h3 {
+	color: #272727;
+	margin-bottom: 20px;
+	font: 400 25px/1 'Poppins', sans-serif;
+}
+
+.double-circle-block {
+	display: inline-block;
+	border-radius: 50%;
+	background-color: #fc5f45;
+	height: 100px;
+	width: 100px;
+	color: #fff;
+	position: relative;
+	box-shadow: 0 0 0 3px 0 #fff, 0 0 0 6px, #fc5f45;
+}
+
+.double-circle-block .price {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font: 400 25px/1 'Poppins', sans-serif;
+	width: 100%;
+	text-align: center;
+}
+
+.double-circle-block .price > span {
+	display: inline-block;
+	width: 100%;
+	font-size: 13px;
+}
+
+.subscribe-block {
+	padding:150px 0;
+}
+
+.subscribe-block h2 {
+	color: #272727;
+	font: 400 30px/1 'Poppins', sans-serif;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.subscribe-block .input-holder {
+	max-width: 480px;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 25px;
+	overflow: hidden:
+}
+
+.subscribe-block .input-holder input {
+	padding-right: 200px;
+	padding-left: 25px;
+	border-radius: 25px;
+	border: 1px solid #efefef;
+	background-color: #f7f7f7;
+	height: 50px;
+	transition: all 0.5s ease-in-out;
+}
+
+.subscribe-block .input-holder input[type="email"]:focus {
+	outline: none;
+	border-color: #00f;
+}
+
+.subscribe-block .input-holder button[type="submit"] {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 180px;
+	background: #fc5f45;
+	color: #fff;
+	font: 600 16px/50px 'Poppins', sans-serif;
+	border: none;
+	text-transform: uppercase;
+	transition: background 0.5s ease-in-out;
+}
+
+.subscribe-block .input-holder input[type="submit"]:hover {
+	background: #f43636;
+}
+
+
+
+
+
+
 
 
 
