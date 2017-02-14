@@ -1,5 +1,9 @@
 *{box-sizing: border-box;}
-html, body {height: auto;}
+html, body {
+	height: auto;
+	overflow-x: hidden;
+	width: 100%;
+}
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
@@ -31,6 +35,11 @@ ul {
 	list-style-type: none;
 }
 a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+img {
 	display: inline-block;
 	text-decoration: none;
 }
@@ -145,6 +154,19 @@ a {
 }
 header {
 	padding: 24px 0;
+}
+
+.burger {
+	display: none;
+	float: right;
+	font-size: 24px;
+	line-height: 1;
+	color: #272727;
+}
+
+.burger:before {
+	content: '\f0c9';
+	font-family: 'Fontawesome';	
 }
 
 .welcome-block {
@@ -508,7 +530,7 @@ header {
 	top: -50px;
 	height: 300px;
 	padding: 40px 60px 55px 35px;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,0,0.5);
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
 	background: #fff;
 	border-bottom: 3px solid transparent;
 	max-width: 460px;
@@ -622,9 +644,80 @@ header {
 	background: #f43636;
 }
 
+@media screen and (max-width:1140px) {
+	.about-article {
+		position: relative;
+		top: auto;
+		right: auto;
+		margin: 0 auto;
+		transform: none;
+		max-width: 100%;
+	}
+	.about-block img {
+		display: block;
+		margin: 0 auto;
+	}
+	.content-wrapper, header {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.article-about .description-part {
+		padding-right: 0;
+		border: none;
+		max-width: 100%;
+	}
+	.share-icon {
+		display: none;
+	}
+	.article-about .soc-part {
+		display: inline-block;
+		text-align: center;
+		margin: 25px 0 0;
+		width: 100%;
+	}
+	.article-about .soc-part li {
+		display: inline-block;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.work-steps .row-step {
+		/* margin-bottom: 25px; */
+	}
+	.work-steps .absolute-block {
+		position: static;
+		height: auto;
+		margin: 0 auto;
+		max-width: 556px;
+	}
+	.row-step img {
+		max-width: 556px;
+		width: 100%;
+	}
+}
 
-
-
+@media screen and (max-width:1024px) {
+	.head-menu ul {
+		position: absolute;
+		top: -100%;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #fff;
+		z-index: 10;
+		padding: 100px;
+		transition: ease-in-out 0.2s transform;
+	}
+	.head-menu ul.active,
+    .burger:hover + .head-menu ul {
+		transform: translateY(100%);
+	}
+	.head-menu li {
+		display: block;
+		text-align: center;
+		margin: 0 0 15px;
+	}
+	.burger {display: block;}
+}
 
 
 
